@@ -1,0 +1,26 @@
+<% _.forEach(site.data.groups, function(value, key) { %>
+  <section class="archives-wrap">
+    <div class="archive-year-wrap">
+        <i class="icon fa fa-tags"></i> <%- key %>
+    </div>
+    <div class="archives">
+      <% var postCount = 0; %>
+      <% _.forEach(value, function(v) { %>
+        <% site.posts.each(function(post) { %>
+          <% post.tags.each(function (t) { %>
+            <% if (t.name === v) { %>
+              <% postCount++; %>
+                <% if (postCount % 2 == 1) { %>
+                <div class="article-row">
+                <% } %>
+                  <%- partial('common/summary', { post: post }) %>
+                <% if (postCount == post.tags.length || postCount % 2 == 0) { %>
+                </div>
+                <% } %>
+            <% } %>
+          <% }) %>
+        <% }) %>
+      <% }) %>
+    </div>
+  </section>
+<% }) %>

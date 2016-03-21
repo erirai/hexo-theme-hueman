@@ -1,0 +1,27 @@
+index:
+    home: 'Home'
+    about: 'Über mich'
+    ricettario: 'Rezepte'
+    search: 'Suchen'
+    archive: 'Archiv'
+    category: 'Kategorie'
+    uncategorized: 'Nicht kategorisiert'
+    tag: 'Tag'
+nav:
+    current_page:
+        other: 'Seite %d '
+    total_page:
+        other: 'von %d'
+sidebar:
+    follow: 'folge'
+    newer: 'neuer'
+    older: 'äter'
+    recents: 'Aktuelle'
+    archives: 'Archivierte'
+    categories: 'Kategorien'
+    links: 'Links'
+    tags: 'tags'
+    tag_cloud: 'tag cloud'
+article:
+    comments: 'Kommentare'
+    share: 'Teile'

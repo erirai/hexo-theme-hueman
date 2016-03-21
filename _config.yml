@@ -1,28 +1,32 @@
 # Menus
 menu:
-    Home: /hexo-theme-hueman/
+    # Home: /hexo-theme-hueman/
+    Home: /
+    Ricettario: /groups.html
     # Delete this row if you don't want categories in your header nav bar
     Categories:
-    About: /hexo-theme-hueman/about/index.html
+    About: /about.html
 
 # Customize
 customize:
     logo:
-        width: 165
-        height: 60
-        url: images/logo-header.png
-    theme_color: '#3b8dbd'
+        width: 400
+        height: 151
+        # url: images/logo-header.png
+        # url: images/logo.jpg
+        url: images/logo_web.png
+    theme_color: '#FF9F4C'
     highlight: androidstudio
-    sidebar: left # sidebar position, options: left, right
+    sidebar: right # sidebar position, options: left, right
     thumbnail: true # enable posts thumbnail, options: true, false
-    favicon: # path to favicon
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
-        twitter: /
-        facebook: /
-        google-plus: /
-        github: https://github.com/ppoffice/hexo-theme-hueman
-        weibo: /
-        rss: /
+        # twitter: /
+        # facebook: /
+        # google-plus: /
+        github: https://github.com/erirai
+        instagram: http://instagram.com/erica_raiano
+        # weibo: /
+        # rss: /
 
 # Widgets
 widgets:
@@ -37,10 +41,11 @@ widgets:
 search:
     swiftype: # enter swiftype install key here
     baidu: false # you need to disable other search engines to use Baidu search, options: true, false
+    local: true
 
 # Comment
 comment:
-    disqus: hexo-theme-hueman # enter disqus shortname here
+    disqus: frangipani # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
 
@@ -51,7 +56,7 @@ share: default # options: jiathis, bdshare, addtoany, default
 plugins:
     fancybox: true # options: true, false
     scrollLoading: true # options: true, false
-    google_analytics: # enter the tracking ID for your Google Analytics
+    google_analytics: UA-42950201-2 # enter the tracking ID for your Google Analytics
     baidu_analytics: # enter Baidu Analytics hash key
 
 # Miscellaneous
@@ -62,4 +67,5 @@ miscellaneous:
         twitter_id:
         google_plus:
     links:
-        Hexo: http://hexo.io
+        BAKERIA: http://bakeria.ch/
+        Belles Fleurs: http://bellesfleurs.ch/
