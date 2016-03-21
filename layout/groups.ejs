@@ -10,11 +10,11 @@
           <% post.tags.each(function (t) { %>
             <% if (t.name === v) { %>
               <% postCount++; %>
-                <% if (postCount % 2 == 1) { %>
+                <% if (postCount % 3 == 1) { %>
                 <div class="article-row">
                 <% } %>
-                  <%- partial('common/summary', { post: post }) %>
-                <% if (postCount == post.tags.length || postCount % 2 == 0) { %>
+                  <%- partial('common/summary_listing', { post: post }) %>
+                <% if (postCount == post.tags.length || postCount % 3 == 0) { %>
                 </div>
                 <% } %>
             <% } %>
