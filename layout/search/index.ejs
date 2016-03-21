@@ -49,7 +49,12 @@
           }, 20);
         });
       });
-      var path = "search.xml";
+      $('#search-input').keypress(function(e) {
+            if(e.which == 13) {
+                window.location.href = '<%= config.root %>search.html?search=' + document.getElementById('search-input').value;
+            }
+       });
+      var path = "<%= config.root %>search.xml";
       searchFunc(path, 'search-input', 'local-search-result');
    </script>
 <% } else { %>

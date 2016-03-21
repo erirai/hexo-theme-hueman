@@ -1,6 +1,6 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-single article-type-<%= post.layout %>" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.link || post.title) { %>
+        <% if (typeof(hideTitle) === 'undefined' && (post.link || post.title)) { %>
             <header class="article-header">
                 <%- partial('post/title', { class_name: 'article-title' }) %>
             </header>
@@ -15,7 +15,9 @@
             <%- post.content %>
         </div>
         <footer class="article-footer">
+            <% if (!post.noShare) { %>
             <%- partial('share/index', { post: post }) %>
+            <% } %>
         </footer>
     </div>
 </article>
