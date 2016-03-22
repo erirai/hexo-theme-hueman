@@ -15,7 +15,7 @@
             </p>
             <p class="date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
         </div> -->
-        <%- partial('post/title', { class_name: 'article-title', linkable: true }) %>
+        <%- partial('post/title', { class_name: 'article-title article-title-small', linkable: true }) %>
         <!-- <p class="article-excerpt">
             <%- excerpt(post) %>
         </p> -->
