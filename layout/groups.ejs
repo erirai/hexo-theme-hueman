@@ -1,26 +1,38 @@
+
+<div style="margin: 20px;">
 <% _.forEach(site.data.groups, function(value, key) { %>
-  <section class="archives-wrap">
+  <a href="#<%- key %>" style="margin-right: 10px; text-decoration: none; color: #444;">
+    <i class="icon fa fa-tags"></i> <%- key %>
+  </a>
+<% }) %>
+</div>
+
+<% _.forEach(site.data.groups, function(value, key) { %>
+  <section id="<%- key %>" class="archives-wrap">
     <div class="archive-year-wrap">
         <i class="icon fa fa-tags"></i> <%- key %>
     </div>
     <div class="archives">
       <% var postCount = 0; %>
       <% _.forEach(value, function(v) { %>
-        <% site.posts.each(function(post) { %>
-          <% post.tags.each(function (t) { %>
+        <% site.posts.each(function(post, indexP) { %>
+          <% post.tags.each(function (t, indexT) { %>
             <% if (t.name === v) { %>
               <% postCount++; %>
                 <% if (postCount % 3 == 1) { %>
                 <div class="article-row">
                 <% } %>
                   <%- partial('common/summary_listing', { post: post }) %>
-                <% if (postCount == post.tags.length || postCount % 3 == 0) { %>
+                <% if (postCount % 3 == 0) { %>
                 </div>
                 <% } %>
             <% } %>
           <% }) %>
         <% }) %>
       <% }) %>
+                <% if (postCount % 3 != 0) { %>
+                </div>
+                <% } %>
     </div>
   </section>
 <% }) %>
