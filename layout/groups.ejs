@@ -13,12 +13,12 @@
         <i class="icon fa fa-tags"></i> <%- key %>
     </div>
     <div class="archives">
-      <% var postCount = 0; %>
+      <% var postCount = 0; var usedPosts = {}; %>
       <% _.forEach(value, function(v) { %>
         <% site.posts.each(function(post, indexP) { %>
           <% post.tags.each(function (t, indexT) { %>
-            <% if (t.name === v) { %>
-              <% postCount++; %>
+            <% if (t.name === v && usedPosts[post.title] !== post) { %>
+              <% postCount++; usedPosts[post.title] = post; %>
                 <% if (postCount % 3 == 1) { %>
                 <div class="article-row">
                 <% } %>
