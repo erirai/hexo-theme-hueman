@@ -40,6 +40,8 @@
         <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="<%= theme.rssType || "application/atom+xml" %>" />
     <% } %>
 
+    <%- autoCanonical(config, page) %>
+
 
     <!-- Icons -->
     <link rel="icon" href="favicon.ico" />
