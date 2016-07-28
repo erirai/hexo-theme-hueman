@@ -20,11 +20,11 @@ customize:
     sidebar: right # sidebar position, options: left, right
     thumbnail: true # enable posts thumbnail, options: true, false
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
-        # twitter: /
         # facebook: /
         # google-plus: /
-        github: https://github.com/erirai
+        twitter: https://twitter.com/erica_raiano
         instagram: http://instagram.com/erica_raiano
+        github: https://github.com/erirai
         # weibo: /
         # rss: /
 
@@ -64,7 +64,7 @@ miscellaneous:
     open_graph: # see http://ogp.me
         fb_app_id:
         fb_admins:
-        twitter_id:
+        twitter_id: erica_raiano
         google_plus:
     links:
         BAKERIA: http://bakeria.ch/
