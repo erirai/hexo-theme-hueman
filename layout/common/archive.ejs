@@ -12,6 +12,9 @@
             </div>
             <div class="archives">
     <% } %>
+    <% if (post.alternates && post.alternates.length && post.lang !== config.language[0]) { %>
+      <% return; %>
+    <% } %>
     <% postCount++; %>
     <% if (postCount % 2 == 1) { %>
         <div class="article-row">

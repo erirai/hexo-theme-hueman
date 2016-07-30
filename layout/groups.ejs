@@ -16,6 +16,9 @@
       <% var postCount = 0; var usedPosts = {}; %>
       <% _.forEach(value, function(v) { %>
         <% site.posts.each(function(post, indexP) { %>
+          <% if (post.alternates && post.alternates.length && post.lang !== config.language[0]) { %>
+            <% return; %>
+          <% } %>
           <% post.tags.each(function (t, indexT) { %>
             <% if (t.name === v && usedPosts[post.title] !== post) { %>
               <% postCount++; usedPosts[post.title] = post; %>

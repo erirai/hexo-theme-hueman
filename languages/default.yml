@@ -1,0 +1,27 @@
+index:
+    home: 'Home'
+    about: 'Su di me'
+    ricettario: 'Ricettario'
+    search: 'Cerca'
+    archive: 'Archivio'
+    category: 'Categoria'
+    uncategorized: 'Non categorizzato'
+    tag: 'Tag'
+nav:
+    current_page:
+        other: 'Pagina %d '
+    total_page:
+        other: 'di %d'
+sidebar:
+    follow: 'segui'
+    newer: 'più recente'
+    older: 'precedente'
+    recents: 'Recenti'
+    archives: 'Archiviati'
+    categories: 'Categorie'
+    links: 'link'
+    tags: 'tag'
+    tag_cloud: 'tag cloud'
+article:
+    comments: 'Commenti'
+    share: 'Condividi'
