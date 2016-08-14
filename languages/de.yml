@@ -25,3 +25,10 @@ sidebar:
 article:
     comments: 'Kommentare'
     share: 'Teile'
+insight:
+    hint: 'Tippe etwas ein...'
+    posts: 'Posts'
+    pages: 'Seiten'
+    categories: 'Kategorien'
+    tags: 'Tags'
+    untitled: '(Ohne Titel)'

@@ -5,7 +5,7 @@
                 <%- partial('post/title', { class_name: 'article-title' }) %>
             </header>
         <% } %>
-        <% if (!post.noDate) { %>
+        <% if (!post.noDate || post.layout != 'page') { %>
         <div class="article-subtitle">
             <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
             <%- partial('post/tag') %>
