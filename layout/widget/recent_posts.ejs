@@ -4,7 +4,7 @@
         <div class="widget">
             <ul id="recent-post" class="<%= (theme.customize.thumbnail?'':'no-thumbnail') %>">
                 <% site.posts.sort('date', -1).limit(5).each(function(post) { %>
-                    <% if (post.alternates && post.alternates.length && post.lang !== config.language[0]) { %>
+                    <% if (post.alternates && post.alternates.length && (post.lang !== page.lang && post.lang !== config.language[0])) { %>
                       <% return; %>
                     <% } %>
                     <li>

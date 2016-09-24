@@ -42,7 +42,7 @@
 
     <%- autoCanonical(config, page) %>
 
-    <link rel="alternative" hreflang="it" href="<%= page.permalink || config.url %>">
+    <link rel="alternative" hreflang="<%= page.lang || 'it' %>" href="<%= page.permalink || config.url %>">
 
 
     <!-- Icons -->
