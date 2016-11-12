@@ -145,6 +145,20 @@
     &:before
         content: '#'
 
+.article-entry-lng
+    @extend $base-style
+    clearfix()
+    color: color-default
+    font-size: font-size-article
+    font-weight: 300
+    line-height: line-height
+    a
+        color: color-theme
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+
+
 .article-entry
     @extend $base-style
     clearfix()
