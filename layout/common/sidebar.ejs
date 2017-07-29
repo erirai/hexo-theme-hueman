@@ -7,7 +7,11 @@
                 <% if (theme.customize.social_links[i]) { %>
                 <li>
                     <a class="social-tooltip" title="<%= i %>" href="<%- url_for(theme.customize.social_links[i]) %>" target="<%= i !== 'mail' ? '_blank' : '' %>">
+                        <% if (i === 'steemit') { %>
+                        <img src="<%- url_for('img/steemit_white.png') %>" itemprop="image" />
+                        <% } else { %>
                         <i class="icon fa fa-<%= i === 'mail' ? 'envelope' : i %>"></i>
+                        <% } %>
                     </a>
                 </li>
                 <% } %>
