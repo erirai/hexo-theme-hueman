@@ -1,8 +1,28 @@
-
-<div style="margin: 20px;">
+<% if (page.alternates && page.alternates.length) { %>
+  <article class="article article-single article-type-page" style="padding-top: 5px; padding-bottom: 0;" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <% for (var ai = 0, aLen = page.alternates.length; ai < aLen; ai++) { %>
+        <% var alternate = page.alternates[ai]; %>
+        <% if (page.lang !== alternate.lang) { %>
+          <div class="article-entry-lng">
+            <a href="<%- url_for(alternate.path) %>"><i class="fa fa-language" aria-hidden="true"></i> <%= alternate.lang %></a>
+          </div>
+        <% } %>
+      <% } %>
+    </div>
+  </article>
+<% } %>
+<div style="margin: 20px; margin-left: 30px;">
+<%
+function translateGroup(cat) {
+  var trans = __('groups.' + cat);
+  if (trans === ('groups.' + cat)) return cat;
+  return trans;
+}
+%>
 <% _.forEach(site.data.groups, function(value, key) { %>
   <a href="#<%- key %>" style="margin-right: 10px; text-decoration: none; color: #444;">
-    <i class="icon fa fa-tags"></i> <%- key %>
+    <i class="icon fa fa-tags"></i> <%- translateGroup(key) %>
   </a>
 <% }) %>
 </div>
@@ -10,13 +30,13 @@
 <% _.forEach(site.data.groups, function(value, key) { %>
   <section id="<%- key %>" class="archives-wrap">
     <div class="archive-year-wrap">
-        <i class="icon fa fa-tags"></i> <%- key %>
+        <i class="icon fa fa-tags"></i> <%- translateGroup(key) %>
     </div>
     <div class="archives">
       <% var postCount = 0; var usedPosts = {}; %>
       <% _.forEach(value, function(v) { %>
         <% site.posts.each(function(post, indexP) { %>
-          <% if (post.alternates && post.alternates.length && post.lang !== config.language[0]) { %>
+          <% if (post.alternates && post.alternates.length && post.lang !== page.lang) { %>
             <% return; %>
           <% } %>
           <% post.tags.each(function (t, indexT) { %>

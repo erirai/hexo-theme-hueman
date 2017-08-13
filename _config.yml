@@ -2,10 +2,16 @@
 menu:
     # Home: /hexo-theme-hueman/
     Home: /
-    Ricettario: /groups.html
+    Ricettario:
+      default: /groups.html
+      it: /groups.html
+      de: /groups-de.html
     # Delete this row if you don't want categories in your header nav bar
     Categories:
-    About: /about.html
+    About:
+      default: /about.html
+      it: /about.html
+      de: /about-de.html
 
 # Customize
 customize:
@@ -73,7 +79,8 @@ miscellaneous:
         twitter_id: erica_raiano
         google_plus:
     links:
-        BAKERIA: http://bakeria.ch/
-        Belles Fleurs: http://bellesfleurs.ch/
-        Fabulousity: http://fabulousity.it/
+        PinkFish: https://www.pinkfisch.ch
+        Bakeria: http://bakeria.ch
+        Belles Fleurs: http://bellesfleurs.ch
+        #Fabulousity: http://fabulousity.it
         Oreegano: http://profumodifrangipani.oreegano.com
