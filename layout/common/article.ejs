@@ -15,9 +15,9 @@
           <% for (var ai = 0, aLen = post.alternates.length; ai < aLen; ai++) { %>
             <% var alternate = post.alternates[ai]; %>
             <% if (post.lang !== alternate.lang) { %>
-              <div class="article-entry-lng">
+              <!--<div class="article-entry-lng">
                 <a href="<%- url_for(alternate.path) %>"><i class="fa fa-language" aria-hidden="true"></i> <%= alternate.lang %></a>
-              </div>
+              </div>-->
             <% } %>
           <% } %>
         <% } %>

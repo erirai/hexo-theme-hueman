@@ -1,16 +1,16 @@
 <% if (page.alternates && page.alternates.length) { %>
-  <article class="article article-single article-type-page" style="padding-top: 5px; padding-bottom: 0;" itemscope itemprop="blogPost">
-    <div class="article-inner">
+  <!--<article class="article article-single article-type-page" style="padding-top: 5px; padding-bottom: 0;" itemscope itemprop="blogPost">
+    <div class="article-inner">-->
       <% for (var ai = 0, aLen = page.alternates.length; ai < aLen; ai++) { %>
         <% var alternate = page.alternates[ai]; %>
         <% if (page.lang !== alternate.lang) { %>
-          <div class="article-entry-lng">
+          <!--<div class="article-entry-lng">
             <a href="<%- url_for(alternate.path) %>"><i class="fa fa-language" aria-hidden="true"></i> <%= alternate.lang %></a>
-          </div>
+          </div>-->
         <% } %>
       <% } %>
-    </div>
-  </article>
+    <!--</div>
+  </article>-->
 <% } %>
 <div style="margin: 20px; margin-left: 30px;">
 <%

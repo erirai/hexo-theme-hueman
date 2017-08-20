@@ -12,7 +12,7 @@
             </div>
             <div class="archives">
     <% } %>
-    <% if (post.alternates && post.alternates.length && post.lang !== config.language[0]) { %>
+    <% if (post.alternates && post.alternates.length && post.lang !== page.lang) { %>
       <% return; %>
     <% } %>
     <% postCount++; %>

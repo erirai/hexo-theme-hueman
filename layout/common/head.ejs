@@ -42,7 +42,7 @@
 
     <%- autoCanonical(config, page) %>
 
-    <link rel="alternative" hreflang="<%= page.lang || 'it' %>" href="<%= page.permalink || config.url %>">
+    <link rel="alternative" hreflang="<%= page.lang === 'it' ? 'de' : 'it' %>" href="<%= page.permalink || config.url %>">
 
 
     <!-- Icons -->
@@ -68,4 +68,32 @@
 
     <%- js('libs/jquery/2.0.3/jquery.min') %>
     <%- partial('plugin/scripts', { isHead: true }) %>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        content: {
+          header: "<%= __('cookies.header')%>",
+          message: "<%= __('cookies.message')%>",
+          dismiss: "<%= __('cookies.dismiss')%>",
+          allow: "<%= __('cookies.allow')%>",
+          deny: "<%= __('cookies.deny')%>",
+          link: "<%= __('cookies.link')%>",
+          href: 'http://cookiesandyou.com',
+          close: '&#x274c;',
+        },
+        "palette": {
+          "popup": {
+            "background": "#61d0c5",
+            "text": "#069494"
+          },
+          "button": {
+            "background": "#FF9F4C",
+            "text": "#ffffff"
+          }
+        },
+        "theme": "edgeless"
+      })});
+    </script>
 </head>

@@ -1,6 +1,11 @@
 <div class="main-body-header">
     <h1 class="header">
     <%
+        function translateCategory(cat) {
+          var trans = __('categories.' + cat);
+          if (trans === ('categories.' + cat)) return cat;
+          return trans;
+        }
         var title = page.title;
         if (page.archive) {
             title = __('index.archive');
@@ -11,7 +16,7 @@
             }
             title = '<i class="icon fa fa-archive"></i>' + title;
         } else if (page.category) {
-            title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': <em class="page-title-link">' + page.category + '</em>';
+            title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': <em class="page-title-link">' + translateCategory(page.category) + '</em>';
         } else if (page.tag) {
             title = '<i class="icon fa fa-tag"></i>' + __('index.tag') + ': <em>' + page.tag + '</em>';
         } else if (is_post()) {
@@ -30,5 +35,15 @@
         }
     %>
     <%- title %>
+    <% if (page && page.alternates && page.alternates.length) { %>
+      <% for (var ai = 0, aLen = page.alternates.length; ai < aLen; ai++) { %>
+        <% var alternate = page.alternates[ai]; %>
+        <% if (page.lang !== alternate.lang) { %>
+          <div class="article-entry-lng" style="float: right; font-size: smaller;">
+            <a href="<%- url_for(alternate.path) %>"><i class="fa fa-language" aria-hidden="true"></i> <%= alternate.lang %></a>
+          </div>
+        <% } %>
+      <% } %>
+    <% } %>
     </h1>
 </div>

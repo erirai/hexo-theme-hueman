@@ -5,6 +5,11 @@
         separator: '►',
         show_count: false,
         class: 'article-category',
+        transform: function (cat) {
+          var trans = __('categories.' + cat);
+          if (trans === ('categories.' + cat)) return cat;
+          return trans;
+        }
     }) %>
     </div>
 <% } %>

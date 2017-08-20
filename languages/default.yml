@@ -32,6 +32,13 @@ insight:
     categories: 'Categorie'
     tags: 'Tag'
     untitled: '(senza titolo)'
+cookies:
+  header: 'Cookies utilizzati sul sito web!'
+  message: "Questo sito web utilizza i cookie per assicurarsi di ottenere l'esperienza migliore sul nostro sito web."
+  dismiss: 'Capito!'
+  allow: 'Consenti i cookie'
+  deny: 'Declino'
+  link: 'Per saperne di più'
 categories:
   Dolce: 'Dolce'
   Bevande: 'Bevande'
@@ -64,4 +71,4 @@ groups:
   'Primi Piatti': 'Primi Piatti'
   'Secondi Piatti e Contorni': 'Secondi Piatti e Contorni'
   'Torte salate, Muffin salati...': 'Torte salate, Muffin salati...'
-  "Ricette con la Zucca": 'Ricette con la Zucca' 
+  "Ricette con la Zucca": 'Ricette con la Zucca'

@@ -32,6 +32,13 @@ insight:
     categories: 'Kategorien'
     tags: 'Tags'
     untitled: '(Ohne Titel)'
+cookies:
+  header: 'Cookies werden auf der Website verwendet!'
+  message: 'Diese Website verwendet Cookies, um sicherzustellen, dass Sie die beste Erfahrung auf dieser Website erhalten.'
+  dismiss: 'Verstanden!'
+  allow: 'Cookies zulassen'
+  deny: 'Verweigern'
+  link: 'Erfahren Sie mehr'
 categories:
   Dolce: 'Süsses'
   Bevande: 'Getränke'
@@ -64,4 +71,4 @@ groups:
   'Primi Piatti': 'Erster Gang'
   'Secondi Piatti e Contorni': 'Zweiter Gang und Beilagen'
   'Torte salate, Muffin salati...': 'Herzhafte Tartes, Muffins und...'
-  "Ricette con la Zucca": 'Kürbisrezepte' 
+  "Ricette con la Zucca": 'Kürbisrezepte'

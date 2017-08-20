@@ -1,7 +1,10 @@
 # Menus
 menu:
     # Home: /hexo-theme-hueman/
-    Home: /
+    Home:
+      default: /
+      it: /it
+      de: /de
     Ricettario:
       default: /groups.html
       it: /groups.html
