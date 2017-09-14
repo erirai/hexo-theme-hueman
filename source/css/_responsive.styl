@@ -5,6 +5,9 @@
     .nav-container-inner
         display: block !important
 
+    #search-mobile
+        display: none
+
 /* ------------------------------------------------------------------------- *
  *    Toggle Sidebar s1 : 959px > 480px
 /* ------------------------------------------------------------------------- */
@@ -21,6 +24,8 @@
             .search-form-input
                 &:focus
                     width: 100px
+        #search-mobile
+            display: none
     .main-body
         margin-top: - sidebar-toggle-width
     .main-body-inner
@@ -115,8 +120,11 @@
         .nav-container
             padding: 0px
             #main-nav-toggle
-                float: none
+                /*float: none*/
                 display: block
+                float: right
+                width: auto
+                
             .nav-container-inner
                 display: none
             #main-nav
@@ -153,6 +161,7 @@
                 a
                     border-bottom: 1px solid rgba(255,255,255,0.06)
             #sub-nav
+                display: none
                 float: none
                 .search-form
                     &:before
@@ -160,6 +169,8 @@
                 .search-form-input
                     font-size: font-size
                     width: 90%
+        #search-mobile
+            display: block
     .main-body-inner
         padding: 0px
         background: none
