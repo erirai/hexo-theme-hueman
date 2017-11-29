@@ -23,7 +23,7 @@ customize:
         height: 121
         # url: images/logo-header.png
         # url: images/logo.jpg
-        url: images/logo_web.png
+        url: images/logo_web_xmas.png
     theme_color: '#FF9F4C'
     highlight: androidstudio
     sidebar: right # sidebar position, options: left, right
