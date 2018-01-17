@@ -29,14 +29,14 @@ customize:
     sidebar: right # sidebar position, options: left, right
     thumbnail: true # enable posts thumbnail, options: true, false
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
-        # facebook: /
         # google-plus: /
         instagram: http://instagram.com/erica_raiano
         pinterest: https://www.pinterest.com/ericaraiano
         youtube: https://www.youtube.com/channel/UCdBfmHzuTKjZDC7GyFEuTXA
         twitter: https://twitter.com/erica_raiano
         github: https://github.com/erirai
-        steemit: https://steemit.com/@frangipani
+        # steemit: https://steemit.com/@frangipani
+        facebook: https://www.facebook.com/Frangipani-2005236236357378/
         mail: mailto:profumodifrangipani@outlook.com
         # weibo: /
         # rss: /
