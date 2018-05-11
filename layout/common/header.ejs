@@ -33,11 +33,19 @@
                                     }) %>
                                 <% } else if (typeof(theme.menu[i]) !== 'string') { %>
                                   <li class="main-nav-list-item" >
-                                      <a class="main-nav-list-link" href="<%- url_for(theme.menu[i][page.lang || 'default']) %>"><%= __('index.' + i.toLowerCase()) %></a>
+                                      <% if (i.toLowerCase() === 'home') { %>
+                                        <a class="main-nav-list-link" href="<%- url_for(theme.menu[i][page.lang || 'default']) %>"><%= __(page.current === 1 ? 'index.home' : 'index.posts') %></a>
+                                      <% } else { %>
+                                        <a class="main-nav-list-link" href="<%- url_for(theme.menu[i][page.lang || 'default']) %>"><%= __('index.' + i.toLowerCase()) %></a>
+                                      <% } %>
                                   </li>
                                 <% } else { %>
                                   <li class="main-nav-list-item" >
+                                    <% if (i.toLowerCase() === 'home') { %>
+                                      <a class="main-nav-list-link" href="<%- url_for(theme.menu[i]) %>"><%= __(page.current === 1 ? 'index.home' : 'index.posts') %></a>
+                                    <% } else { %>
                                       <a class="main-nav-list-link" href="<%- url_for(theme.menu[i]) %>"><%= __('index.' + i.toLowerCase()) %></a>
+                                    <% } %>
                                   </li>
                                 <% } %>
                             <% } %>

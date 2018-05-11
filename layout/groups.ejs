@@ -36,7 +36,7 @@ function translateGroup(cat) {
       <% var postCount = 0; var usedPosts = {}; %>
       <% _.forEach(value, function(v) { %>
         <% site.posts.each(function(post, indexP) { %>
-          <% if (post.alternates && post.alternates.length && post.lang !== page.lang) { %>
+          <% if (/*post.alternates && post.alternates.length && */post.lang !== page.lang) { %>
             <% return; %>
           <% } %>
           <% post.tags.each(function (t, indexT) { %>

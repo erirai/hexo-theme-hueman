@@ -1,5 +1,6 @@
 index:
-    home: 'Home'
+    home: 'Ultime Ricette'
+    posts: 'Ricette'
     about: 'Su di me'
     ricettario: 'Ricettario'
     search: 'Cerca'

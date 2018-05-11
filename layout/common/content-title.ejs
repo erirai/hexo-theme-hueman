@@ -25,7 +25,7 @@
                 title = __('index.uncategorized');
             }
         } else if (is_home()) {
-            title = '<em class="page-title-link" data-url="home">' + __('index.home') + '</em>';
+            title = '<em class="page-title-link" data-url="home">' + __(page.current === 1 ? 'index.home' : 'index.posts') + '</em>';
         } else if (page.subtitle) {
             title = '<em class="page-title-link" data-url="' + url_for(page.path) + '">' + page.subtitle + '</em>';
         } else if (page.title) {

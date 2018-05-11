@@ -1,7 +1,8 @@
 index:
-    home: 'Home'
+    home: 'Aktuelle Rezepte'
+    posts: 'Rezepte'
     about: 'Über mich'
-    ricettario: 'Rezepte'
+    ricettario: 'Rezeptsammlung'
     search: 'Suchen'
     archive: 'Archiv'
     category: 'Kategorie'
