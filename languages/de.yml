@@ -57,6 +57,8 @@ categories:
   'Primi Piatti': 'Erster Gang'
   'Secondi Piatti e Contorni': 'Zweiter Gang und Beilagen'
   'Torte salate, Muffin salati...': 'Herzhafte Tartes, Muffins und...'
+  'Z_Ambiente': "Wir helfen der Umwelt"
+  'Consigli Green': 'Green Tips'
 groups:
   Bevande: 'Getränke'
   Biscotti: 'Kekse'

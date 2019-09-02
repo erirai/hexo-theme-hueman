@@ -1,3 +1,7 @@
+<% var leafIcon = '<i class="icon fa fa-leaf"></i> '; %>
+<% var globeIcon = '<i class="icon fa fa-globe"></i> '; %>
+<% var cakeIcon = '<i class="icon fa fa-birthday-cake"></i> '; %>
+<% var saltIcon = '<i class="icon fa fa-cutlery"></i> '; %>
 <header id="header">
     <div id="header-outer" class="outer">
         <div class="container">
@@ -26,14 +30,41 @@
                                         class: 'main-nav',
                                         show_count: false,
                                         transform: function (cat) {
+                                          var showLeaf = cat === 'Consigli Green';
+                                          var showGlobe = cat === 'Z_Ambiente';
+                                          var showCake = cat === 'Dolce';
+                                          var showSalt = cat === 'Salato';
                                           var trans = __('categories.' + cat);
-                                          if (trans === ('categories.' + cat)) return cat;
-                                          return trans;
+                                          var ret;
+                                          if (trans === ('categories.' + cat)) {
+                                            ret = cat;
+                                            return showLeaf ? (leafIcon+cat) : cat;
+                                          }
+                                          if (!ret) ret = trans;
+                                          if (showLeaf) ret = leafIcon+ret;
+                                          if (showGlobe) ret = globeIcon+ret;
+                                          if (showCake) ret = cakeIcon+ret;
+                                          if (showSalt) ret = saltIcon+ret;
+                                          return ret;
                                         }
                                     }) %>
                                 <% } else if (typeof(theme.menu[i]) !== 'string') { %>
+                                    <% var showBook = i.toLowerCase() === 'ricettario'; %>
+                                    <% var showAbout = i.toLowerCase() === 'about'; %>
+                                    <% var showNews = i.toLowerCase() === 'home'; %>
                                   <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="<%- url_for(theme.menu[i][page.lang || 'default']) %>"><%= __('index.' + i.toLowerCase()) %></a>
+                                    <a class="main-nav-list-link" href="<%- url_for(theme.menu[i][page.lang || 'default']) %>">
+                                        <% if (showBook) { %>
+                                            <i class="icon fa fa-book"></i> 
+                                        <% } %>
+                                        <% if (showAbout) { %>
+                                            <i class="icon fa fa-user"></i> 
+                                        <% } %>
+                                        <% if (showNews) { %>
+                                            <i class="icon fa fa-rss"></i> 
+                                        <% } %>
+                                        <%= __('index.' + i.toLowerCase()) %>
+                                    </a>
                                   </li>
                                 <% } else { %>
                                   <li class="main-nav-list-item" >

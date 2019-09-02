@@ -1,15 +1,29 @@
+<% var showLeaf = post.categories && post.categories.length && post.categories.data[post.categories.length - 1].slug === 'Z-Ambiente/Consigli-Green'; %>
 <% if (post.link) { %>
     <h1 itemprop="name">
-        <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
+        <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url">
+            <% if (showLeaf) { %>
+                <i class="icon fa fa-leaf" style="color: green;"></i> 
+            <% } %>
+            <%= post.title %>
+        </a>
     </h1>
 <% } else if (post.title) { %>
     <% if (typeof(linkable) !== 'undefined' && linkable) { %>
         <h1 class="<%= class_name %>" itemprop="name">
-        <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+        <a href="<%- url_for(post.path) %>">
+            <% if (showLeaf) { %>
+                <i class="icon fa fa-leaf" style="color: green;"></i> 
+            <% } %>
+            <%= post.title %>
+        </a>
         </h1>
     <% } else { %>
         <h1 class="<%= class_name %>" itemprop="name">
-        <%= post.title %>
+            <% if (showLeaf) { %>
+                <i class="icon fa fa-leaf" style="color: green;"></i> 
+            <% } %>
+            <%= post.title %>
         </h1>
     <% } %>
 <% } %>
