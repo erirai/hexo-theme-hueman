@@ -59,7 +59,7 @@ search:
 
 # Comment
 comment:
-    disqus: frangipani # enter disqus shortname here
+    disqus: #frangipani # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
 

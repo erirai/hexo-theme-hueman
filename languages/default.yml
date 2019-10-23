@@ -37,7 +37,7 @@ cookies:
   header: 'Cookies utilizzati sul sito web!'
   message: "Questo sito Web utilizza i cookie per assicurarti di ottenere l'esperienza migliore su questo sito web e per pubblicare annunci pubblicitari, misurarli e aumentare la sicurezza dei visitatori. Navigando nel blog o facendo clic all'interno del blog, accetti la raccolta di informazioni attraverso i cookie su questo blog."
   dismiss: 'Capito!'
-  allow: 'Consenti i cookie'
+  allow: 'Consenti'
   deny: 'Declino'
   link: 'Per saperne di più'
 categories:
