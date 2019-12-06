@@ -33,33 +33,48 @@
         <%- paginator({prev_text: '&laquo;', next_text: '&raquo;'}) %>
     </nav>
 <% } %>
+
 <% if (page.current === 1 && site.data.currentSeason && site.data.currentSeason.posts && site.data.currentSeason.posts.length > 0) { %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <div class="sub-body-header">
         <h1>
             <em class="page-title-link"><%= site.data.currentSeason.title[page.lang || 'it'] %></em>
         </h1>
     </div>
-    <% var postCount = 0; var usedPosts = {}; %>
-    <% _.forEach(site.data.currentSeason.posts, function(value) { %>
-        <% site.posts.each(function(post, indexP) { %>
-            <% if (/*post.alternates && post.alternates.length && */post.lang !== page.lang) { %>
-              <% return; %>
-            <% } %>
-            <% if (post.path.indexOf(value) < 0) { %>
-              <% return; %>
-            <% } %>
-              <% if (usedPosts[post.title] !== post) { %>
+    <div id="slick-carousel-season" class="article-row">
+        <% var postCount = 0; var usedPosts = {}; %>
+        <% _.forEach(site.data.currentSeason.posts, function(value) { %>
+            <% site.posts.each(function(post, indexP) { %>
+                <% if (/*post.alternates && post.alternates.length && */post.lang !== page.lang) { %>
+                    <% return; %>
+                <% } %>
+                <% if (post.path.indexOf(value) < 0) { %>
+                    <% return; %>
+                <% } %>
+                <% if (usedPosts[post.title] !== post) { %>
                 <% postCount++; usedPosts[post.title] = post; %>
-                  <% if (postCount % 3 == 1) { %>
-                  <div class="article-row">
-                  <% } %>
                     <%- partial('common/summary_listing', { post: post }) %>
-                  <% if (postCount % 3 == 0) { %>
-                  </div>
-                  <% } %>
-              <% } %>
+                <% } %>
+            <% }) %>
         <% }) %>
-    <% }) %>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#slick-carousel-season').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                infinite: true,
+                arrows: false,
+            });
+        });
+    </script>
+
     <div class="article-row">
         <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
         <!-- after-season -->
