@@ -42,7 +42,15 @@
 
     <%- autoCanonical(config, page) %>
 
-    <link rel="alternative" hreflang="<%= page.lang === 'it' ? 'de' : 'it' %>" href="<%= page.permalink || config.url %>">
+    <% var alternativePath = config.url;
+        if (page.alternates && page.alternates.length) {
+            var alternate = page.alternates.find((a) => a.lang !== page.lang)
+            if (alternate && page.lang !== alternate.lang) {
+                alternativePath += url_for(alternate.path);
+            }
+        }
+    %>
+    <link rel="alternative" hreflang="<%= page.lang === 'it' ? 'de' : 'it' %>" href="<%= alternativePath %>">
 
 
     <!-- Icons -->
