@@ -20,21 +20,21 @@ function translateGroup(cat) {
   return trans;
 }
 %>
-<% _.forEach(site.data.groups, function(value, key) { %>
+<% Object.entries(site.data.groups).forEach(function([key, value]) { %>
   <a href="#<%- key %>" style="margin-right: 10px; text-decoration: none; color: #444;">
     <i class="icon fa fa-tags"></i> <%- translateGroup(key) %>
   </a>
 <% }) %>
 </div>
 
-<% _.forEach(site.data.groups, function(value, key) { %>
+<% Object.entries(site.data.groups).forEach(function([key, value]) { %>
   <section id="<%- key %>" class="archives-wrap">
     <div class="archive-year-wrap">
         <i class="icon fa fa-tags"></i> <%- translateGroup(key) %>
     </div>
     <div class="archives">
       <% var postCount = 0; var usedPosts = {}; %>
-      <% _.forEach(value, function(v) { %>
+      <% value.forEach(function(v) { %>
         <% site.posts.each(function(post, indexP) { %>
           <% if (/*post.alternates && post.alternates.length && */post.lang !== page.lang) { %>
             <% return; %>

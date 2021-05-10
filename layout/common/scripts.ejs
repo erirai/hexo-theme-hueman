@@ -41,19 +41,19 @@
     }
     window.addEventListener("load", function(){
         window.cookieconsent.initialise({
-            "palette": {
-            "popup": {
-                "background": "#61d0c5",
-                "text": "#069494"
+            palette: {
+            popup: {
+                background: "#61d0c5",
+                text: "#069494"
             },
-            "button": {
-                "background": "#FF9F4C",
-                "text": "#ffffff"
+            button: {
+                background: "#FF9F4C",
+                text: "#ffffff"
             }
             },
-            "theme": "edgeless",
-            "type": "opt-in",
-            "content": {
+            theme: "edgeless",
+            type: "opt-in",
+            content: {
                 header: "<%= __('cookies.header')%>",
                 message: "<%= __('cookies.message')%>",
                 dismiss: "<%= __('cookies.dismiss')%>",
@@ -62,6 +62,9 @@
                 link: "<%= __('cookies.link')%>",
                 href: 'http://cookiesandyou.com',
                 close: '&#x274c;',
+            },
+            elements: {
+                deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
             },
             onInitialise: function (status) {
                 var type = this.options.type;

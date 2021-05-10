@@ -30,7 +30,7 @@
 <% if (page.total > 1) { %>
     <nav id="page-nav">
         <span class="pages"><%= _p('nav.current_page', page.current) %><%= _p('nav.total_page', page.total) %></span>
-        <%- paginator({prev_text: '&laquo;', next_text: '&raquo;'}) %>
+        <%- paginator({prev_text: "&laquo;", next_text: "&raquo;", escape: false}) %>
     </nav>
 <% } %>
 
@@ -46,7 +46,7 @@
     </div>
     <div id="slick-carousel-season" class="article-row">
         <% var postCount = 0; var usedPosts = {}; %>
-        <% _.forEach(site.data.currentSeason.posts, function(value) { %>
+        <% site.data.currentSeason.posts.forEach(function(value) { %>
             <% site.posts.each(function(post, indexP) { %>
                 <% if (/*post.alternates && post.alternates.length && */post.lang !== page.lang) { %>
                     <% return; %>
