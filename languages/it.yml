@@ -35,7 +35,7 @@ insight:
     untitled: '(senza titolo)'
 cookies:
   header: 'Cookies utilizzati sul sito web!'
-  message: "Questo sito Web utilizza i cookie per assicurarti di ottenere l'esperienza migliore su questo sito web e per pubblicare annunci pubblicitari, misurarli e aumentare la sicurezza dei visitatori. Navigando nel blog o facendo clic all'interno del blog, accetti la raccolta di informazioni attraverso i cookie su questo blog."
+  message: "Questo sito Web utilizza i cookie per assicurarti di ottenere l'esperienza migliore su questo sito web, misurarli e aumentare la sicurezza dei visitatori. Navigando nel blog o facendo clic all'interno del blog, accetti la raccolta di informazioni attraverso i cookie su questo blog."
   dismiss: 'Capito!'
   allow: 'Consenti'
   deny: 'Declino'

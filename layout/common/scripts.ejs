@@ -9,11 +9,11 @@
 
 <script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
-    function downloadGoogleAdsenseJSAtOnload() {
-        var element = document.createElement("script");
-        element.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-        document.body.appendChild(element);
-    }
+    // function downloadGoogleAdsenseJSAtOnload() {
+    //     var element = document.createElement("script");
+    //     element.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    //     document.body.appendChild(element);
+    // }
     function enableCookies() {
         if (window.location.hostname.search('localhost') === -1) {
             // analytics
@@ -41,7 +41,7 @@
             // ga('set', 'anonymizeIp', true);
 
             // adsense
-            downloadGoogleAdsenseJSAtOnload();
+            // downloadGoogleAdsenseJSAtOnload();
         }
     }
     function disableCookies() {
@@ -74,7 +74,7 @@
                 allow: "<%= __('cookies.allow')%>",
                 deny: "<%= __('cookies.deny')%>",
                 link: "<%= __('cookies.link')%>",
-                href: 'http://cookiesandyou.com',
+                href: "<%= page.lang === 'it' ? '/privacy.html' : '/privacy-de.html' %>",
                 close: '&#x274c;',
             },
             elements: {
