@@ -15,11 +15,11 @@
                         <% } %>
                         <% var showLeaf = post.categories && post.categories.length && post.categories.data[post.categories.length - 1].slug === 'Z-Ambiente/Consigli-Green'; %>
                         <div class="item-inner">
-                            <p class="item-category"><%- list_categories(post.categories, {show_count: false, depth:2, class: 'article-category', style: 'none', separator: '<i class="icon fa fa-angle-right"></i>', transform: function (cat) { var trans = __('categories.' + cat); if (trans === ('categories.' + cat)) return cat; return trans; }}) %></p>
+                            <p class="item-category"><%- list_categories(post.categories, {show_count: false, depth:2, class: 'article-category', style: 'none', separator: '<i class="icon fa-solid fa-angle-right"></i>', transform: function (cat) { var trans = __('categories.' + cat); if (trans === ('categories.' + cat)) return cat; return trans; }}) %></p>
                             <p class="item-title">
                                 <a href="<%- url_for((post.link ? post.link : post.path)) %>" class="title">
                                     <% if (showLeaf) { %>
-                                        <i class="icon fa fa-leaf" style="color: green;"></i> 
+                                        <i class="icon fa-solid fa-leaf" style="color: green;"></i> 
                                     <% } %>
                                     <%= post.title %>
                                 </a>

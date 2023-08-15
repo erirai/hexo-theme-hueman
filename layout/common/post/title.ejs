@@ -3,7 +3,7 @@
     <h1 itemprop="name">
         <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url">
             <% if (showLeaf) { %>
-                <i class="icon fa fa-leaf" style="color: green;"></i> 
+                <i class="icon fa-solid fa-leaf" style="color: green;"></i> 
             <% } %>
             <%= post.title %>
         </a>
@@ -13,7 +13,7 @@
         <h1 class="<%= class_name %>" itemprop="name">
         <a href="<%- url_for(post.path) %>">
             <% if (showLeaf) { %>
-                <i class="icon fa fa-leaf" style="color: green;"></i> 
+                <i class="icon fa-solid fa-leaf" style="color: green;"></i> 
             <% } %>
             <%= post.title %>
         </a>
@@ -21,7 +21,7 @@
     <% } else { %>
         <h1 class="<%= class_name %>" itemprop="name">
             <% if (showLeaf) { %>
-                <i class="icon fa fa-leaf" style="color: green;"></i> 
+                <i class="icon fa-solid fa-leaf" style="color: green;"></i> 
             <% } %>
             <%= post.title %>
         </h1>

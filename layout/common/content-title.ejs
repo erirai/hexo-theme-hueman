@@ -14,13 +14,13 @@
             } else if (page.year) {
                 title += ': ' + page.year;
             }
-            title = '<i class="icon fa fa-archive"></i>' + title;
+            title = '<i class="icon fa-solid fa-box-archive"></i>' + title;
         } else if (page.category) {
-            title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': <em class="page-title-link">' + translateCategory(page.category) + '</em>';
+            title = '<i class="icon fa-regular fa-folder-open"></i>' + __('index.category') + ': <em class="page-title-link">' + translateCategory(page.category) + '</em>';
         } else if (page.tag) {
-            title = '<i class="icon fa fa-tag"></i>' + __('index.tag') + ': <em>' + page.tag + '</em>';
+            title = '<i class="icon fa-solid fa-tag"></i>' + __('index.tag') + ': <em>' + page.tag + '</em>';
         } else if (is_post()) {
-            title = list_categories(page.categories, {show_count: false, style: 'none', class: 'page-title', separator: '<i class="icon fa fa-angle-right"></i>', transform: translateCategory});
+            title = list_categories(page.categories, {show_count: false, style: 'none', class: 'page-title', separator: '<i class="icon fa-solid fa-angle-right"></i>', transform: translateCategory});
             if (title == "") {
                 title = __('index.uncategorized');
             }
@@ -40,7 +40,7 @@
         <% var alternate = page.alternates[ai]; %>
         <% if (page.lang !== alternate.lang) { %>
           <div class="article-entry-lng" style="float: right; font-size: smaller;">
-            <a href="<%- url_for(alternate.path) %>"><i class="fa fa-language" aria-hidden="true"></i> <%= alternate.lang %></a>
+            <a href="<%- url_for(alternate.path) %>"><i class="fa-solid fa-language" aria-hidden="true"></i> <%= alternate.lang %></a>
           </div>
         <% } %>
       <% } %>

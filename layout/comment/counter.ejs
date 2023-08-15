@@ -1,6 +1,6 @@
 <% if (false/*post.comments*/) { %>
 <span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
+    <i class="fa-regular fa-comments"></i>
     <% if (theme.comment.disqus) { %>
         <span class="disqus-comment-count" data-disqus-identifier="<%= post.disqusId || '' %>" data-disqus-url="<%= post.permalink %>">0</span>
     <% } else if (theme.comment.duoshuo) { %>
@@ -11,6 +11,6 @@
 <% var showLeaf = post.categories && post.categories.length && post.categories.data[post.categories.length - 1].slug === 'Z-Ambiente/Consigli-Green'; %>
 <% if (showLeaf) { %>
 <span class="green-flag">
-    <i class="fa fa-leaf"></i>
+    <i class="fa-solid fa-leaf"></i>
 </span>
 <% } %>

@@ -10,7 +10,7 @@
                         <% if (i === 'steemit') { %>
                         <img src="<%- url_for('img/steemit_white.png') %>" itemprop="image" />
                         <% } else { %>
-                        <i class="icon fa fa-<%= i === 'mail' ? 'envelope' : i %>"></i>
+                        <i class="icon fa-<%= i === 'mail' ? 'regular' : 'brands' %> fa-<%= i === 'mail' ? 'envelope' : i %>"></i>
                         <% } %>
                     </a>
                 </li>
