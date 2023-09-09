@@ -12,6 +12,7 @@
 </div>
 <script>
 (function (window) {
+    var categoriesMapping = JSON.parse('<%- JSON.stringify(site.categories.reduce((function (prev, c) { prev[c.name] = escape(__("categories." + c.name)); return prev; }), {})) %>');
     var INSIGHT_CONFIG = {
         TRANSLATION: {
             POSTS: '<%= __("insight.posts") %>',
@@ -19,6 +20,7 @@
             CATEGORIES: '<%= __("insight.categories") %>',
             TAGS: '<%= __("insight.tags") %>',
             UNTITLED: '<%= __("insight.untitled") %>',
+            categoriesMapping
         },
         ROOT_URL: '<%= config.root %>',
         CONTENT_URL: '<%- url_for("/content.json")%>',
