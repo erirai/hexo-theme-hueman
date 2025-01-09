@@ -51,11 +51,11 @@
                 <% if (/*post.alternates && post.alternates.length && */post.lang !== page.lang) { %>
                     <% return; %>
                 <% } %>
-                <% if (post.path.indexOf(value) < 0) { %>
+                <% if ((post.label && post.label !== value) || (!post.label && post.path.indexOf(value) < 0)) { %>
                     <% return; %>
                 <% } %>
                 <% if (usedPosts[post.title] !== post) { %>
-                <% postCount++; usedPosts[post.title] = post; %>
+                    <% postCount++; usedPosts[post.title] = post; %>
                     <%- partial('common/summary_listing', { post: post }) %>
                 <% } %>
             <% }) %>
